@@ -14,7 +14,17 @@ public class GuessingGame {
 		//if they guess too high tell them 
 		//if they guess too low tell them 
 		//Let them know they won 
-		
+		int guess; 
+		do {
+			guess = getInput("Guess a number");
+			if(guess < randomNumber) {
+				System.out.println("Too low");
+			}else if(guess > randomNumber ) {
+				System.out.println("Too high.");
+			}else {
+				System.out.println("YOU WIN!!!");
+			}
+		}while(guess != randomNumber); 
 		scan.close(); 
 	}
 	
