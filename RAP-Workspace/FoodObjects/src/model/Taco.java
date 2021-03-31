@@ -1,9 +1,9 @@
 package model;
 
-public class Taco {
+public class Taco  extends FoodItem {
 	private String flavor; 
 	private String tortilla ;
-	private double cost; 
+	
 
 	//Constructors 
 	public Taco() {
@@ -15,7 +15,8 @@ public class Taco {
 	
 		flavor = f; 
 		tortilla = t;
-		cost = c; 
+		//setCost(c); 
+		this.cost = c; 
 	}
 	
 	//Getters and setters 
@@ -34,14 +35,6 @@ public class Taco {
 
 	public void setTortilla(String tortilla) {
 		this.tortilla = tortilla;
-	}
-
-	public double getCost() {
-		return cost;
-	}
-
-	public void setCost(double cost) {
-		this.cost = cost;
 	}
 
 	
