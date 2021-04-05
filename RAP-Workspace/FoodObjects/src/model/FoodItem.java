@@ -3,16 +3,23 @@ package model;
 public class FoodItem extends Object{
 	protected String name= "Food item";
 	//accessible in any subclass regardless of the package
-	protected double cost; 
+	protected double cost = 0.0; 
 	
 	//Constructors
+	//no-arg constructor
 	public FoodItem() {
+		this("Default value");
+		System.out.println("In FoodItem no-arg constructor");
 	}
 
+	//parameterized constructor
 	public FoodItem(String name) {
+		//super(); <-- here implicitly
 		this.name = name;
+		System.out.println("In FoodItem parameterized constructor");
 	}
 	
+
 	//Getters and Setters
 	public String getName() {
 		return name;

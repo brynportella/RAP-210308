@@ -37,5 +37,10 @@ public class Taco  extends FoodItem {
 		this.tortilla = tortilla;
 	}
 
+	@Override
+	public String toString() {
+		return "Taco [flavor=" + flavor + ", tortilla=" + tortilla + ", name=" + name + ", cost=" + cost + "]";
+	}
+
 	
 }

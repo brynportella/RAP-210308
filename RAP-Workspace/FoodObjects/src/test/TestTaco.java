@@ -1,5 +1,6 @@
 package test;
 
+import model.Empanada;
 import model.Taco;
 
 public class TestTaco {
@@ -17,6 +18,14 @@ public class TestTaco {
 				+" tortilla="+bell.getTortilla()+" cost ="+bell.getCost());
 		
 		Taco a = new Taco();
+		
+		//Create a ChipsAndSalsa object and store in variable called cas 
+		//ChipsAndSalsa cas = new ChipsAndSalsa(); 
+		
+		//System.out.println(cas.getName());
+		//System.out.println(cas);
+		
+		Empanada e = new Empanada(); 
 		
 		
 		Double b = 2.0;
