@@ -10,12 +10,10 @@ public class FoodItem extends Object{
 	}
 
 	public FoodItem(String name) {
-		//super();
 		this.name = name;
 	}
 	
 	//Getters and Setters
-	//A
 	public String getName() {
 		return name;
 	}

@@ -3,7 +3,7 @@ package model;
 public class ChipsAndSalsa extends FoodItem{
 	//THIS IS INHERITED ___ DONT SHADOW IT OR HIDE IT 
 	//double cost;
-	//B
+	
 	public String getName() {
 		return super.getName()+" CHIPS AND SALSA";
 	}
