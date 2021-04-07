@@ -1,6 +1,6 @@
 package model;
 
-public class FoodItem extends Object{
+public abstract class FoodItem extends Object{
 	protected String name= "Food item";
 	//accessible in any subclass regardless of the package
 	protected double cost = 0.0; 
@@ -9,14 +9,14 @@ public class FoodItem extends Object{
 	//no-arg constructor
 	public FoodItem() {
 		this("Default value");
-		System.out.println("In FoodItem no-arg constructor");
+		//System.out.println("In FoodItem no-arg constructor");
 	}
 
 	//parameterized constructor
 	public FoodItem(String name) {
 		//super(); <-- here implicitly
 		this.name = name;
-		System.out.println("In FoodItem parameterized constructor");
+		//System.out.println("In FoodItem parameterized constructor");
 	}
 	
 
@@ -71,6 +71,6 @@ public class FoodItem extends Object{
 		return true;
 	}
 	
-	
+	public abstract boolean isEdible(int days); 
 
 }

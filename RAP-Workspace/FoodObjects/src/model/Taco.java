@@ -42,5 +42,7 @@ public class Taco  extends FoodItem {
 		return "Taco [flavor=" + flavor + ", tortilla=" + tortilla + ", name=" + name + ", cost=" + cost + "]";
 	}
 
-	
+	public boolean isEdible(int days) {
+		return days <= 2? true : false; 
+	}
 }

@@ -26,6 +26,10 @@ public class FoodFight {
 				System.out.println(Arrays.toString(player.getInventory()));
 			}
 		}
+		System.out.println("What would you like to toss?");
+		
+		int option = scan.nextInt(); 
+		player.tossItem(option);
 		scan.close();
 	}
 
@@ -38,7 +42,7 @@ public class FoodFight {
 	}
 
 	private static FoodItem createFood(int choice) {
-		FoodItem item = null;
+		FoodItem item= null;//Can't do this = new FoodItem(); with abstract class
 		switch (choice) {
 		case 1:
 			// item to hold an empanada

@@ -15,4 +15,7 @@ public class Empanada extends FoodItem{
 		return "Empanada [name=" + name + ", cost=" + cost + "]";
 	}
 	
+	public boolean isEdible(int days) {
+		return days <= 3? true : false; 
+	}
 }
