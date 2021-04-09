@@ -4,6 +4,8 @@ import model.Empanada;
 import model.Taco;
 
 public class TestTaco {
+	//Unused variables are intentional for learning
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		Taco bell; 
 		//initialized our bell reference variable
