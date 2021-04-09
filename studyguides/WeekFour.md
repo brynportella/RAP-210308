@@ -20,7 +20,7 @@
 * Inheritance 
     - definition
     - protected access modifier
-    - method overriding
+    - method overriding 
 
 * Object Class 
     - toString
