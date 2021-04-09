@@ -1,9 +1,0 @@
-package game;
-
-import model.FoodItem;
-
-public class Player {
-	//inventory variable 
-	//array of FoodItem objects 
-	FoodItem[] inventory = new FoodItem[5];
-}

@@ -1,8 +1,0 @@
-
-public class TestDog {
-	final Dog doggy = new Dog(); 
-	
-	public static void main(String[] args) {
-
-	}
-}
