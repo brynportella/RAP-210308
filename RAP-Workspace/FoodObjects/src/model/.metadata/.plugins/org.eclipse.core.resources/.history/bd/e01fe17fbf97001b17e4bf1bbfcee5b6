@@ -1,0 +1,8 @@
+package model;
+
+import game.Player;
+
+public interface Tossable {
+	public abstract void toss(); 
+	public abstract void toss(Player target); 
+}

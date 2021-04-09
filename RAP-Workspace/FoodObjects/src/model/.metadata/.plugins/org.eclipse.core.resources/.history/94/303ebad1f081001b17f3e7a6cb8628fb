@@ -1,0 +1,9 @@
+
+public class Greeting {
+	public static void main(String[] args) {
+		//Create an instance of Greeting 
+		//store in a reference variable called a
+		Greeting a = new Greeting();
+		Greeting b = new Greeting(); 
+	}
+}

@@ -1,0 +1,13 @@
+
+public class TestDog {
+	final Dog doggy = new Dog(); 
+	
+	public static void main(String[] args) {
+		TestDog td = new TestDog(); 
+		td.doggy.name = "Bob"; 
+		System.out.println(td.doggy);
+		td.doggy.name = "Rob"; 
+		System.out.println(td.doggy);
+		td.doggy = new Dog(); 
+	}
+}

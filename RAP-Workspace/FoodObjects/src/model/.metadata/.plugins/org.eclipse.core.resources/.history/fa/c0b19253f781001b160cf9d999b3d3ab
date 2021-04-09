@@ -1,0 +1,15 @@
+
+public class Example {
+	public static void main(String[] args) {
+		String myString = "abcdefg"; 
+		for(int i = 0; i<myString.length(); i++) {
+			char c = myString.charAt(i); 
+			switch(c) {
+			case 'a': 
+				System.out.println("A");
+			case 'b':
+				System.out.println("B");
+			}
+		}
+	}
+}
