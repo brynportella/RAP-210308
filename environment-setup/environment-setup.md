@@ -69,7 +69,7 @@ You should see your operating system listed ("Windows 10" in the above example) 
 
 ### Step 6: Install DBeaver
 
-* [Windows Install](./dbeaver-install.md)
+* [DBeaver Install](./dbeaver-install.md)
 
 ### Step 7: Install Apache Tomcat
 * [Windows Install](./tomcat-install.md)

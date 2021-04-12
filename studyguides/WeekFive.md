@@ -14,6 +14,13 @@
 - Exceptions
     - Checked v. Unchecked
     - try {} catch(){} finally {}
+    - Common Exceptions:
+        - IndexOutOfBoundsException
+        - NullPointerException
+        - ClassCastException
+        - Arithmetic Exception
+        - IllegalArgumentException
+        - NumberFormatException
 - final keyword
 - Constructors
     - super keyword 
