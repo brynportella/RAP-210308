@@ -62,7 +62,8 @@ You should see your operating system listed ("Windows 10" in the above example) 
 * [Eclipse install](./eclipse-install.md)
 
 ### Step 4: Install Apache Maven
-* [Maven Install](./maven-install.md)
+* [Windows Maven Install](./maven-install-windows.md)
+* [Mac Maven Install](./maven-install-mac.md)
 
 ### Step 5: Install PostgreSQL 10
 * [Windows PostgreSQL Install](./postgres-install.md)
