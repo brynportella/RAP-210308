@@ -7,6 +7,7 @@ import model.ChipsAndSalsa;
 import model.Empanada;
 import model.FoodItem;
 import model.Taco;
+import model.Croquetta;
 
 public class FoodFight {
 	private static Scanner scan = new Scanner(System.in);
@@ -15,7 +16,7 @@ public class FoodFight {
 		Player player = new Player();
 		while (!player.inventoryIsFull()) {
 			int choice = getUserChoice();
-			if(choice == 4) {
+			if(choice == 5) {
 				System.out.println("goodbye");
 				break; 
 			}
@@ -36,7 +37,7 @@ public class FoodFight {
 	private static int getUserChoice() {
 		System.out.println("What food do you want in your inventory? Please select"
 				+ " a number corresponding to the food you desire." + "\n1. Empanada" + "\n2. Taco"
-				+ "\n3. Chips and Salsa. ");
+				+ "\n3. Chips and Salsa" + "\n4. Croquetta. ");
 		int choice = scan.nextInt();
 		return choice;
 	}
@@ -54,7 +55,10 @@ public class FoodFight {
 		case 3:
 			item = new ChipsAndSalsa();
 			break;
-		case 4: 
+		case 4:
+			item = new Croquetta();
+			break;
+		case 5: 
 			System.out.println("Quitting");
 			break;
 		default:
