@@ -1,4 +1,4 @@
-package model;
+package com.revature.model;
 
 //How do I make this have an IS- A relationship with FoodItem?
 public class Empanada extends FoodItem{

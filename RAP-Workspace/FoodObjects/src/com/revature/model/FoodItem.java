@@ -1,9 +1,11 @@
-package model;
+package com.revature.model;
 
 public abstract class FoodItem extends Object{
 	protected String name= "Food item";
 	//accessible in any subclass regardless of the package
 	protected double cost = 0.0; 
+	
+	static int countOfFoodItems = 0; 
 	
 	//Constructors
 	//no-arg constructor
@@ -16,6 +18,7 @@ public abstract class FoodItem extends Object{
 	public FoodItem(String name) {
 		//super(); <-- here implicitly
 		this.name = name;
+		countOfFoodItems++; 
 		//System.out.println("In FoodItem parameterized constructor");
 	}
 	

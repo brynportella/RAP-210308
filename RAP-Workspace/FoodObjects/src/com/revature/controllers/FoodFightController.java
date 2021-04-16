@@ -1,17 +1,17 @@
-package game;
+package com.revature.controllers;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-import model.ChipsAndSalsa;
-import model.Empanada;
-import model.FoodItem;
-import model.Taco;
+import com.revature.model.ChipsAndSalsa;
+import com.revature.model.Empanada;
+import com.revature.model.FoodItem;
+import com.revature.model.Player;
+import com.revature.model.Taco;
 
-public class FoodFight {
+public class FoodFightController {
 	private static Scanner scan = new Scanner(System.in);
 
-	public static void main(String[] args) {
+	public static void init() {
 		Player player = new Player();
 		while (!player.inventoryIsFull()) {
 			int choice = getUserChoice();
@@ -23,7 +23,7 @@ public class FoodFight {
 			if (item != null) {
 				player.addFoodToInventory(item);
 				System.out.println(item);
-				System.out.println(Arrays.toString(player.getInventory()));
+				System.out.println(player.getInventory());
 			}
 		}
 		System.out.println("What would you like to toss?");
@@ -59,6 +59,7 @@ public class FoodFight {
 			break;
 		default:
 			System.out.println("That's not an option!");
+			throw new IllegalArgumentException("This is invalid " +choice); 
 		}
 		return item;
 	}

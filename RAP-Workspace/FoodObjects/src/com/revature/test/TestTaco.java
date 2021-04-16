@@ -1,7 +1,7 @@
-package test;
+package com.revature.test;
 
-import model.Empanada;
-import model.Taco;
+import com.revature.model.Empanada;
+import com.revature.model.Taco;
 
 public class TestTaco {
 	//Unused variables are intentional for learning

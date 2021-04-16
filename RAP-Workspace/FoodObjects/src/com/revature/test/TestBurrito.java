@@ -1,6 +1,6 @@
-package test;
+package com.revature.test;
 
-import model.Burrito;
+import com.revature.model.Burrito;
 
 public class TestBurrito {
 	public static void testCut(Burrito b) {

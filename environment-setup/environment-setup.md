@@ -73,7 +73,8 @@ You should see your operating system listed ("Windows 10" in the above example) 
 * [DBeaver Install](./dbeaver-install.md)
 
 ### Step 7: Install Apache Tomcat
-* [Windows Install](./tomcat-install.md)
+* [Windows Install](./tomcat-install-windows.md)
+* [Mac Install](./tomcat-install-mac.md)
 
 ### Step 8: Install Postman
 * [Postman Install](./postman-install.md)

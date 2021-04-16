@@ -1,48 +1,43 @@
-package game;
+package com.revature.model;
 
-import model.FoodItem;
-import model.Tossable;
+import java.util.ArrayList;
 
 public class Player {
 	//inventory variable 
 	//array of FoodItem objects 
-	private FoodItem[] inventory = new FoodItem[5];
-	private int numFoodItems = 0; 
+	private ArrayList<FoodItem> inventory = new ArrayList<FoodItem>();
+ 
 
-	public FoodItem[] getInventory() {
+	public ArrayList<FoodItem> getInventory() {
 		return inventory;
 	}
 
-	public void setInventory(FoodItem[] inventory) {
+	public void setInventory(ArrayList<FoodItem> inventory) {
 		this.inventory = inventory;
 	}
 	
 	public int getNumFoodItems() {
-		return this.numFoodItems;
+		return inventory.size();
 	}
 	
 	public void addFoodToInventory(FoodItem item) {
-		if(numFoodItems < inventory.length) {
-			this.inventory[numFoodItems] = item; 
-			numFoodItems++; 
-		}else {
-			System.out.println("Inventory is full!");
-		}
+		this.inventory.add(item);
 	}
 	
 	public boolean inventoryIsFull() {
-		return numFoodItems >= inventory.length; 
+		return false; 
 	}
 	
 	//Get an item from my inventory-- 
 	//check if it can be tossed 
 	//toss the item 
 	public void tossItem(int positionInInventory) {
-		if(positionInInventory < numFoodItems ) {
-			FoodItem item = inventory[positionInInventory];
+		if(positionInInventory < inventory.size() ) {
+			FoodItem item = inventory.get(positionInInventory);
 			if( item instanceof Tossable) {
 				Tossable tossableRef = (Tossable) item; 
-				tossableRef.toss(); 
+				tossableRef.toss();
+				inventory.remove(positionInInventory); 
 			}else {
 				System.out.println("That item can't be tossed!!");
 			}

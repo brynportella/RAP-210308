@@ -47,6 +47,5 @@ public class LinkedList {
 		return s;
 	}
 	
-	// print it all out
 	
 }

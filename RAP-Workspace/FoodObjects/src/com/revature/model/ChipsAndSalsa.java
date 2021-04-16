@@ -1,6 +1,4 @@
-package model;
-
-import game.Player;
+package com.revature.model;
 
 public class ChipsAndSalsa extends FoodItem implements Tossable{
 	//THIS IS INHERITED ___ DONT SHADOW IT OR HIDE IT 
