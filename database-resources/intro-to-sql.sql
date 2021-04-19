@@ -35,3 +35,18 @@ UPDATE students SET gpa = 4.0;
 
 -- Select all records in a table 
 SELECT * FROM students; 
+
+-- Alter table 
+-- Add a column
+ALTER TABLE students ADD COLUMN graduation DATE;
+-- Delete a column
+ALTER TABLE students DROP COLUMN IF EXISTS graduation;
+
+-- Truncate table 
+TRUNCATE TABLE students;
+
+-- Comment on an object 
+COMMENT ON TABLE students IS 'Information about students in school abc';
+
+-- Remove a comment on an object 
+COMMENT ON TABLE students IS NULL;
