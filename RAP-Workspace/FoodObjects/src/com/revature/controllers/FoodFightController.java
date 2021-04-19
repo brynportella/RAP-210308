@@ -8,6 +8,8 @@ import com.revature.model.FoodItem;
 import com.revature.model.Player;
 import com.revature.model.Taco;
 
+import com.revature.model.Croquetta;
+
 public class FoodFightController {
 	private static Scanner scan = new Scanner(System.in);
 

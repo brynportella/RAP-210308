@@ -1,6 +1,4 @@
-package model;
-
-import game.Player;
+package com.revature.model;
 
 public class Croquetta extends FoodItem implements Tossable{
 

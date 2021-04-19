@@ -1,6 +1,6 @@
 package test;
 
-import model.Croquetta;
+import com.revature.model.Croquetta;
 
 public class TestCroquetta{
 	public static void main(String[] args) {
