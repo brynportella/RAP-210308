@@ -42,6 +42,7 @@ SELECT MIN(gpa), graduation FROM students GROUP BY GRADUATION;
 -- Bonus - which student has the minumum gpa of their date?  
 SELECT name, gpa, GRADUATION FROM students where gpa in (
 	SELECT MIN(gpa) FROM students GROUP BY GRADUATION);
+-- ^^ sort of incorrect.
 
 -- Get the minimum of the gpa of each graduation YEAR. 
 SELECT date_part('year', graduation) , MIN(gpa) FROM students GROUP BY date_part('year', graduation);
