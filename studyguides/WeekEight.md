@@ -16,8 +16,9 @@
     * outer 
     * inner
     * full
+    * Cartesian product
 * Indexes 
 * Set operations
-    * Cartesian product 
     * union
-    * minus 
+    * minus (EXCEPT)
+    * intersect
