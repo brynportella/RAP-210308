@@ -2,12 +2,14 @@ package com.revature.model;
 
 import java.util.ArrayList;
 
-public class Player {
+public class Player extends User {
 	//inventory variable 
 	//array of FoodItem objects 
 	private ArrayList<FoodItem> inventory = new ArrayList<FoodItem>();
- 
-
+	private int stamina; 
+	private int balance; 
+	private int cleanliness; 
+	
 	public ArrayList<FoodItem> getInventory() {
 		return inventory;
 	}

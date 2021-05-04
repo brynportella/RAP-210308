@@ -1,6 +1,6 @@
 package com.revature.model;
 
-public abstract class FoodItem extends Object{
+public abstract class FoodItem{
 	protected String name= "Food item";
 	//accessible in any subclass regardless of the package
 	protected double cost = 0.0; 
