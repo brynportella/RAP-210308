@@ -4,6 +4,18 @@
   <artifactId>jdbc-exercise</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>jdbc-exercise</name>
-  <description>In class exercise for jdbc.
-</description>
+  <description>In class exercise for jdbc.</description>
+  <packaging>jar</packaging>
+  <properties>
+  	<maven.compiler.source>11</maven.compiler.source>
+  	<maven.compiler.source>11</maven.compiler.source>
+  </properties>
+  <dependencies>
+  	<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.2.20</version>
+		</dependency>
+  </dependencies>
 </project>

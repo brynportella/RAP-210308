@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DAOUtility {
 	private static final String CONNECTION_USERNAME = "postgres"; 
 	private static final String CONNECTION_PASSWORD = "password"; 
-	private static final String CONNECTION_URL = "jdbc:postgresql://localhost:5432/..." ; 
+	private static final String CONNECTION_URL = "jdbc:postgresql://localhost:5434/postgres" ; 
 	private static Connection connection; 
 	
 	public static Connection getConnection() throws SQLException {
@@ -18,7 +18,7 @@ public class DAOUtility {
 			System.out.println("Could not register driver!");
 			e.printStackTrace();
 		}
-		if (connection == null)
+		if (connection == null || connection.isClosed())
 		 connection = DriverManager.getConnection(CONNECTION_URL, CONNECTION_USERNAME, CONNECTION_PASSWORD);
 		return connection; 
 	}
