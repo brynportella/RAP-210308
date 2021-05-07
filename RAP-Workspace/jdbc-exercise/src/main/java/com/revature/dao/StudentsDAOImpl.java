@@ -12,8 +12,8 @@ import com.revature.model.Student;
 import com.revature.utility.DAOUtility;
 
 public class StudentsDAOImpl implements StudentsDAO {
-	Connection connection;
-	PreparedStatement statement;
+	private Connection connection;
+	private PreparedStatement statement;
 
 	public boolean createStudent(Student student) {
 		try {
@@ -40,9 +40,9 @@ public class StudentsDAOImpl implements StudentsDAO {
 			connection = DAOUtility.getConnection();
 			String sql = "SELECT * FROM students";
 			statement = connection.prepareStatement(sql);
-			ResultSet allStudentRecords= statement.executeQuery();
+			ResultSet allStudentRecords = statement.executeQuery();
 			while(allStudentRecords.next()) {
-				Student newStudent = new Student(allStudentRecords.getInt("id"),
+				Student newStudent = new Student( allStudentRecords.getInt("id"),
 						allStudentRecords.getString("name"),
 						allStudentRecords.getDouble("gpa"),
 						allStudentRecords.getDate("graduation"));
@@ -68,10 +68,10 @@ public class StudentsDAOImpl implements StudentsDAO {
 
 	private void closeResources() {
 		try {
-			if (statement != null) {
+			if (statement != null && !statement.isClosed()) {
 				statement.close();
 			}
-			if(connection != null) {
+			if(connection != null && !connection.isClosed()) {
 				connection.close(); 
 			}
 		}catch(SQLException ex ) {

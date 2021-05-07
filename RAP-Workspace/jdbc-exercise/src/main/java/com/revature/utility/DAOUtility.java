@@ -1,14 +1,31 @@
 package com.revature.utility;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 public class DAOUtility {
-	private static final String CONNECTION_USERNAME = "postgres"; 
-	private static final String CONNECTION_PASSWORD = "password"; 
-	private static final String CONNECTION_URL = "jdbc:postgresql://localhost:5434/postgres" ; 
+	private static String CONNECTION_USERNAME; 
+	private static String CONNECTION_PASSWORD; 
+	private static String CONNECTION_URL ; 
 	private static Connection connection; 
+	static {
+		try {
+			FileInputStream fileStream = new FileInputStream("C:\\Users\\BrynPortella\\Documents\\RAP-210308\\RAP-workspace\\jdbc-exercise\\src\\main\\resources\\application.properties"); 
+			Properties properties = new Properties(); 
+			properties.load(fileStream);
+			CONNECTION_URL = properties.getProperty("URL");	
+			CONNECTION_PASSWORD = properties.getProperty("CONNECTION_PASSWORD"); 
+			CONNECTION_USERNAME = properties.getProperty("CONNECTION_USERNAME"); 
+		}catch(IOException ex) {
+			System.out.println("Failure.");
+			ex.printStackTrace();
+		}
+		
+	}
 	
 	public static Connection getConnection() throws SQLException {
 		try {
