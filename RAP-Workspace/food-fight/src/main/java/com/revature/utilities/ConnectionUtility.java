@@ -12,6 +12,7 @@ public class ConnectionUtility {
 	private static final String CONNECTION_URL = "jdbc:postgresql://localhost:5434/food_fight" ; 
 	private static Connection connection; 
 	
+	//Used to get a database connection
 	public static Connection getConnection() throws SQLException {
 		try {
 			Class.forName("org.postgresql.Driver");
@@ -20,30 +21,33 @@ public class ConnectionUtility {
 			System.out.println("Could not register driver!");
 			e.printStackTrace();
 		}
-		if (connection == null)
+		if (connection == null || connection.isClosed())
 		 connection = DriverManager.getConnection(CONNECTION_URL, CONNECTION_USERNAME, CONNECTION_PASSWORD);
 		return connection; 
 	}
 	
 	
-	
+	//Test getConnection method with actual query 
 	public static void main(String[] args) {
 		
-		try {
-			Connection connection = getConnection(); 
+		try (
+		  Connection connection = getConnection(); 	
+		  PreparedStatement statement = connection.prepareStatement(
+				  "SELECT * FROM food_item_type WHERE type_of_food LIKE ?");
+		){
 			System.out.println("Connection is valid "+connection.isValid(5));
-			String sql = "SELECT * FROM food_item_type WHERE type_of_food LIKE ?";
-			PreparedStatement statement = connection.prepareStatement(sql);
+			
+		
 			statement.setString(1, "%t%");
 			ResultSet set = statement.executeQuery();
 			while(set.next()) {
 				System.out.println(set.getInt("type_id"));
 				System.out.println(set.getString("type_of_food"));
 			}
+			
 		}catch(SQLException ex) {
 			System.out.println("Failure");
 			ex.printStackTrace();
-			
 		}
 
 	}

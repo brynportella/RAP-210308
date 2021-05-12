@@ -12,14 +12,24 @@ public class DAOUtility {
 	private static String CONNECTION_PASSWORD; 
 	private static String CONNECTION_URL ; 
 	private static Connection connection; 
+	
+	
 	static {
 		try {
-			FileInputStream fileStream = new FileInputStream("C:\\Users\\BrynPortella\\Documents\\RAP-210308\\RAP-workspace\\jdbc-exercise\\src\\main\\resources\\application.properties"); 
+			//Path to application.properties
+			FileInputStream fileStream = new FileInputStream(
+					"C:\\Users\\BrynPortella\\Documents\\RAP-210308\\RAP-workspace\\jdbc-exercise\\src\\main\\resources\\application.properties"); 
 			Properties properties = new Properties(); 
 			properties.load(fileStream);
-			CONNECTION_URL = properties.getProperty("URL");	
-			CONNECTION_PASSWORD = properties.getProperty("CONNECTION_PASSWORD"); 
-			CONNECTION_USERNAME = properties.getProperty("CONNECTION_USERNAME"); 
+			//get names of environment variables from properties file
+			String url_system_name = properties.getProperty("URL");	
+			String connection_system_password = properties.getProperty("CONNECTION_PASSWORD"); 
+			String connection_system_username  = properties.getProperty("CONNECTION_USERNAME"); 
+			//get values using environment names from the operating system 
+			CONNECTION_USERNAME = System.getenv(connection_system_username); 
+			CONNECTION_PASSWORD = System.getenv(connection_system_password); 
+			CONNECTION_URL = System.getenv(url_system_name) ; 
+			
 		}catch(IOException ex) {
 			System.out.println("Failure.");
 			ex.printStackTrace();
