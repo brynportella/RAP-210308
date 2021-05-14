@@ -31,7 +31,7 @@ public class Driver {
 			}
 			if( o != null)
 				//Use reflection to get the field names of the class. Even though they are private! 
-				System.out.println(Arrays.toString(o.getClass().getDeclaredFields()));
+				System.out.println(Arrays.toString(o.getClass().getDeclaredConstructors()));
 		}
 		
 		scan.close(); 

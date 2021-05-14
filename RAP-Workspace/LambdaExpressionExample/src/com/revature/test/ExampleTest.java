@@ -15,19 +15,23 @@ import com.revature.Example;
 
 public class ExampleTest {
 	private Example example;
+	//Create new output stream destinations 
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+	//Save original output stream destinations 
 	private final PrintStream originalOut = System.out;
 	private final PrintStream originalErr = System.err;
 
 	@Before
 	public void setUpStreams() {
+		//Set up output streams on System to use new destinations 
 	    System.setOut(new PrintStream(outContent));
 	    System.setErr(new PrintStream(errContent));
 	}
 
 	@After
 	public void restoreStreams() {
+		//restore original destinations 
 	    System.setOut(originalOut);
 	    System.setErr(originalErr);
 	}

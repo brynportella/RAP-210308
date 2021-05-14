@@ -6,11 +6,15 @@ import java.util.function.Consumer;
 public class Example {
 	
 	public void printItems(ArrayList<String> strings) {
-		strings.forEach( x-> System.out.println(x));
+		//strings.forEach( x-> System.out.println(x));
+		
+		strings.forEach((String x) -> {
+			System.out.println(x);
+		} );
 	}
 	
 	public String getList(ArrayList<String> strings) {
-		final StringBuffer y = new StringBuffer("");
+		StringBuffer y = new StringBuffer("");
 		strings.forEach( x-> y.append(x+" "));
 		return y.toString(); 
 	}

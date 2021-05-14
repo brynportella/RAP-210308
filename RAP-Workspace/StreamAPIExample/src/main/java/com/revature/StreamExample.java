@@ -12,7 +12,11 @@ public class StreamExample {
 	public int sum(List<Integer> list) {
 		//return list.stream().reduce(0, (currentSum, element)-> currentSum + element);
 		LOG.info("The list is "+list); 
-		return list.stream().reduce(0, (currentSum, element)->{return currentSum + element;});
+		return list.stream()
+				.reduce(0, 
+						(aggregate, element)->
+							{return aggregate + element;}
+						);
 	}
 	
 	public List<String> toUpperCaseContents(List<String> list){

@@ -1,7 +1,7 @@
 package com.revature.model;
 
 public class B {
-	private String name = "A object";
+	private String name = "B object";
 
 	public String getName() {
 		return name;
